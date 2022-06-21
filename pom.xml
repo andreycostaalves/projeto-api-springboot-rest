@@ -11,6 +11,7 @@
 	<groupId>projeto.spring.api</groupId>
 	<artifactId>projetospringapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>projetospringapi</name>
 	<description>Api REST com Spring boot, JPA e PostgreSql - Microsserviços</description>
 	<properties>
