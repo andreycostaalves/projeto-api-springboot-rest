@@ -16,7 +16,7 @@ public class Telefone {
 
     @JsonIgnore  // Evita recursividade.
     @org.hibernate.annotations.ForeignKey(name = "usuario_id")
-    @ManyToOne
+    @ManyToOne(optional = false)
     private Usuario usuario;
 
     public Long getId() {
