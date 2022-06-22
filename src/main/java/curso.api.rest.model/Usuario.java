@@ -26,6 +26,7 @@ public class Usuario implements Serializable {
     private List<Telefone> telefones = new ArrayList<Telefone>();
 
 
+
     public Long getId() {
         return id;
     }
@@ -56,6 +57,14 @@ public class Usuario implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
     }
 
     @Override

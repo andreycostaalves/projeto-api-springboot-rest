@@ -1,5 +1,7 @@
 package curso.api.rest.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -12,7 +14,8 @@ public class Telefone {
 
     private String numero;
 
-    @org.hibernate.annotations.ForeignKey(name = "USUARIO_ID")
+    @JsonIgnore  // Evita recursividade.
+    @org.hibernate.annotations.ForeignKey(name = "usuario_id")
     @ManyToOne
     private Usuario usuario;
 
