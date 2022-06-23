@@ -21,6 +21,7 @@ public class Role implements GrantedAuthority {
         return this.nomeRole;
     }
 
+
     public Long getId() {
         return id;
     }
