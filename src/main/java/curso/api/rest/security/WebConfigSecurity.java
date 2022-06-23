@@ -29,10 +29,13 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
 
         /* Ativando a permissão para acesso a pagina inicial do sistema: EX: sistema.com/index */
+
                 .disable().authorizeRequests().antMatchers("/").permitAll()
                 .antMatchers("/index").permitAll()
+
         /* URL DE LOGOUT*: Redireciona após o usuario deslogar do sistema. */
                 .anyRequest().authenticated().and().logout().logoutSuccessUrl("/index")
+
         /* Mapeia URL de logout e invalida o usuario. */
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 
