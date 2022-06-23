@@ -11,12 +11,12 @@
 	<groupId>projeto.spring.api</groupId>
 	<artifactId>projetospringapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>projetospringapi</name>
 	<description>Api REST com Spring boot, JPA e PostgreSql - Microsserviços</description>
 	<properties>
 		<java.version>1.8</java.version>
-
+		<maven.test.skip>true</maven.test.skip>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -56,6 +56,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>5.7.2</version>
 		</dependency>
 
 
